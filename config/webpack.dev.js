@@ -66,7 +66,7 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({ 
             filename: './views/index.html',
-            //这里是用 js 文件拼接来生成的 html 代码
+            //这里是用 js 文件拼接来生成的 html 代码 主要是引用了 layout.html 模板和 css 、js 的资源
             template: path.join(__dirname, '../src/views/index.js'),
             inject:false,
             //定义文件分发时的名称
@@ -74,6 +74,7 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({ 
             filename: './widget/index.html',
+            //这里引用的是 html 中组件标签
             template: path.join(__dirname, '../src/widget/index.html'),
             inject:false
         })

@@ -74,7 +74,8 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({ 
             filename: './widget/index.html',
-            template: path.join(__dirname, '../src/widget/index.html')
+            template: path.join(__dirname, '../src/widget/index.html'),
+            inject:false
         })
     ]
 };
